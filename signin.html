@@ -167,7 +167,7 @@
     // Import the functions you need from the SDKs you need
     let user = JSON.parse(localStorage.getItem("user"));
     if (user) {
-      window.location.href = "./christmas.html"
+      window.location.href = "./indexx.html"
     }
 
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
@@ -232,7 +232,7 @@
             const user = userCredential.user;
             console.log(user)
             localStorage.setItem('user',JSON.stringify(user))
-            window.location.href = "./christmas.html"
+            window.location.href = "./index.html"
             // ...
             
           })
