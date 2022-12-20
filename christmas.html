@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MerryChristmas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    ul li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        overflow-x:hidden;
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    body::-webkit-scrollbar {
+        width: 0 !important;
+        display: none;
+    }
+
+    #myH {
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        backface-visibility: hidden;
+        position: fixed;
+        left: 0;
+        color: white;
+        top: 0;
+    }
+
+    .Header_scroll {
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgb(0, 0, 0);
+        box-shadow: #dd4a4a;
+    }
+
+    #logo1 {
+        display: inline;
+        font-family: 'Xanh Mono', monospace;
+        color: white;
+
+    }
+
+    #logo2 {
+        display: inline;
+        color: red;
+        font-family: 'Xanh Mono', monospace;
+    }
+
+    .list {
+        width: 70vw;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 40px;
+    }
+
+    .in-list {
+        padding: 10px 20px;
+        background-color: rgb(247, 61, 37);
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    .SignIn {
+        padding: 10px 25px;
+        background-color: rgb(255, 255, 255);
+        font-size: 15px;
+        border-radius: 5px;
+        color: rgb(247, 61, 37);
+    }
+
+    .SignUp {
+        padding: 10px 60px;
+        background-color: rgb(247, 61, 37);
+        font-size: 15px;
+        color: white;
+        border-radius: 5px;
+
+    }
+
+    .SignIn:hover {
+        cursor: pointer;
+        background-color: rgb(223, 223, 223);
+    }
+
+    .SignUp:hover {
+        cursor: pointer;
+        background-color: rgb(247, 61, 37);
+    }
+
+    .container {
+        width: 100vw;
+        height: 900px;
+        background-image: url('https://static1.s123-cdn-static-a.com/ready_uploads/media/3399916/2000_5e9b22ed17016.jpg');
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        scroll-behavior: smooth;
+        background-attachment: fixed;
+    }
+
+    .strange {
+        margin-left: 40px;
+    }
+
+
+    .introduce {
+        width: 50%;
+        height: auto;
+        margin: 10px 160px;
+        font-family: 'Great Vibes', cursive;
+        font-size: 30px;
+        color: azure;
+    }
+
+    .guide {
+        font-family: 'Dancing Script', cursive;
+        margin: 15px 0;
+    }
+
+    .text {
+        margin: 15px 0 30px 0;
+    }
+
+    .fa-quote-left {
+        padding: 0 5px;
+    }
+
+    .fa-quote-right {
+        padding: 0 5px;
+
+    }
+
+    iframe {
+        border-radius: 20px;
+    }
+
+
+    input[type=text] {
+        padding: 10px;
+        margin-top: 15px;
+        font-size: 30px;
+        width: 90%;
+        border-radius: 10px;
+        font-family: 'Great Vibes', cursive;
+        border-bottom: 0.1px solid red;
+        color: red;
+    }
+
+    .Wish1 {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Wish1 button {
+        padding: 10px;
+        margin-top: 10px;
+        margin-right: 16px;
+        background: rgb(243, 50, 50);
+        font-size: 17px;
+        cursor: pointer;
+        border: none;
+        color: white;
+        border-radius: 10px;
+
+
+    }
+
+    .Wish1 button:hover {
+        background: rgb(250, 122, 122);
+    }
+
+    .part4 {
+        width: 100vw;
+        height: 120vh;
+        max-height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 20px 40px 20px;
+        background-image: url('https://static1.s123-cdn-static-a.com/ready_uploads/media/27962/2000_5cdd4c103f7d5.jpg');
+    }
+
+    .part2 {
+        width: 30vw;
+        height: auto;
+        background-color: white;
+        display: flex;
+        max-height: max-content;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        right: 60px;
+        top: 130px;
+        z-index: 99;
+        border-radius: 50px;
+        border: black 2px solid;
+        padding: 40px 10px;
+    }
+
+    #part4_in {
+        width: 65vw;
+        margin-top: 40px;
+        background-image: none;
+    }
+
+    .List_wish {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        padding-bottom: 50px;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .List_wish::-webkit-scrollbar {
+        width: 0 !important;
+        display: none;
+    }
+
+    .Wish {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 38, 0);
+        border-radius: 20px;
+        border-bottom: solid 1px black;
+        padding: 10px 20px;
+        margin: 10px;
+        color: white;
+    }
+
+    .material-symbols-outlined {
+        width: 30px;
+        height: 100%;
+        border: none;
+    }
+
+    .wish {
+        width: 80%;
+        display: inline;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #text_in {
+        width: 150px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 40px 0 10px;
+        border-right: solid rgb(255, 255, 255);
+        margin-right: 10px;
+    }
+
+    .des {
+        word-break: break-word;
+    }
+
+    .action {
+        display: inline;
+    }
+
+    .part3 {
+        height: 200vh;
+    }
+
+    .Chuc {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Chuc button {
+        padding: 10px;
+        margin-top: 10px;
+        margin-right: 16px;
+        background: rgb(243, 50, 50);
+        font-size: 17px;
+        cursor: pointer;
+        border: none;
+        color: white;
+        border-radius: 10px;
+
+
+    }
+
+    .Chuc button:hover {
+        background: rgb(250, 122, 122);
+    }
+
+    .Chuc_C {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgb(207, 53, 25);
+        border-radius: 20px;
+        border-bottom: solid 1px black;
+        padding: 10px 20px;
+        margin: 5px;
+    }
+
+    .actionC {
+        display: inline;
+    }
+    .fa-trash:hover{
+        cursor: pointer;
+        color: azure;
+    }
+    .List_C {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding-bottom: 50px;
+        overflow-y: scroll;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        color: white;
+    }
+
+    .List_C::-webkit-scrollbar {
+        width: 0 !important;
+        display: none;
+    }
+
+    .chuc {
+        display: inline;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    #des2 {
+        word-break: break-word;
+    }
+
+    span {
+        border: solid 1px #ACACAC;
+        padding: 2px;
+    }
+
+    #clock_start {
+        width: 20px;
+        height: 20px;
+        background-color: rgb(43, 117, 34);
+        border-radius: 30px;
+    }
+
+    #clock_stop {
+        width: 20px;
+        height: 20px;
+        background-color: rgb(224, 31, 31);
+        border-radius: 30px;
+    }
+
+    .clock {
+        width: 60%;
+        margin-top: 50px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .text_01 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 24px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .part3_all {
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .part3 {
+        width: 70vw;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 150px;
+        margin-top: 50px;
+
+    }
+
+    .line {
+        width: 160px;
+        height: 3px;
+        background-color: rgb(252, 5, 5);
+    }
+
+    .P3_text {
+        width: auto;
+        height: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+
+    }
+
+    .P3_Start {
+        font-family: 'Pacifico', cursive;
+    }
+
+    .P3_img {
+        width: 350px;
+        height: 250px;
+        border-radius: 5px;
+    }
+
+    .P3_para {
+        width: auto;
+        font-size: 28px;
+        padding-left:70px ;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .part_middle {
+        width: 100vw;
+        height: 600px;
+        background-image: url('https://static1.s123-cdn-static-a.com/ready_uploads/media/203866/2000_5ceeb53d79c63.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 100px;
+        align-items: flex-start;
+
+    }
+
+    .present {
+        width: 60%;
+        color: white;
+        font-size: 40px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .part_after {
+        width: 70vw;
+        height: 600px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 100px 160px 100px 160px;
+        align-items: center;
+    }
+
+    .person_1 {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+        justify-content: space-around;
+        text-align: center;
+
+    }
+
+    img {
+        width: 80%;
+        height: 250px;
+        border-radius: 100px;
+
+    }
+
+    .founder {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        font-family: 'Signika Negative', sans-serif;
+    }
+
+    .merryP {
+        font-family: 'Amatic SC', cursive;
+        font-size: 20px;
+    }
+
+    .footer {
+        width: 100vw;
+        height: 50px;
+        color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 20px;
+        background-color: #000000;
+    }
+
+    .footer-2 {
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        color: white;
+        font-size: larger;
+
+    }
+    #logout:hover{
+        cursor: pointer;
+        animation: move 0.3s 0.1s 1 forwards;
+        
+    }
+    @keyframes move {
+        0%{
+            background-color: red;
+        }
+        25%{
+            background-color: rgb(216, 2, 2);
+        }
+        75%{
+            background-color: rgb(180, 3, 3);
+        }
+        100%{
+            background-color: rgb(150, 0, 0);
+        }
+    }
+    .in-list:hover{
+        animation: move 0.3s 0.1s 1 forwards;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="header" id="myH">
+        <div class="strange">
+            <h2 id="logo1">Merry</h2>
+            <h1 id="logo2">Christmas</h1>
+        </div>
+        <ul class="list">
+            <li class="in-list">
+                <div id="email"></div>
+            </li>
+            <li class="in-list-b"><button class="SignIn">Login</button></li>
+            <li class="in-list-b"><button class="SignUp">Creat account</button></li>
+            <li class="in-list" id="logout"><i class="fas fa-sign-out"></i></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="introduce">
+            <h1 class="guide">Write your wish here and it will come true</h1>
+            <p class="text"><i class="fas fa-quote-left"></i>Giáng sinh sắp đến rồi, cậu chắc đã phải nỗ
+                lực lắm, còn một chút nuối tiếc năm cũ, hãy để mình giúp cậu <i
+                    class="fas fa-quote-right"></i></p>
+            <iframe width="880" height="480" src="https://www.youtube.com/embed/E3NmvNCxQX0"
+                title="The Wamsutters - Jingle Bells (Acoustic Version)" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="part2">
+        <div class="Chuc">
+            <input type="text" id="inp_holder_C" placeholder="Hãy gửi lời chúc của cậu và mọi người" name="Add">
+            <button id="add_btn_C" type="button"> Chúc</button>
+        </div>
+        <ul class="List_C">
+
+        </ul>
+        <div class="text_01">
+            <p id="tech"><i class="fas fa-quote-left"></i>Những lời chúc sẽ xuất hiện vào đúng thời điểm nó cần
+                xuất hiện <i class="fas fa-quote-right"></i>
+            </p>
+            <div class="clock">
+                <div>
+                    <span id="d">Ngày</span> :
+                    <span id="h">Giờ</span> :
+                    <span id="m">Phút</span> :
+                    <span id="s">Giây</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="part3_all">
+        <div class="part3">
+            <h1 class="P3_Start">Tại sao mình lại ở đây ?</h1>
+            <div class="line"></div>
+            <div class="P3_text">
+                <img src="https://static1.s123-cdn-static-a.com/ready_uploads/media/3073168/2000_5e184942c60b8.jpg"
+                    alt="Hãy đến với tôi" class="P3_img">
+                <div class="P3_para">
+                    <p><i class="fas fa-quote-left"></i><b>
+                            Mùa giáng sinh đến rồi, thật tuyệt vời khi cậu có người thân bên cạnh, có bạn bè, có anh em
+                            và
+                            có
+                            những người yêu cậu thật lòng. Nhưng chúng ta lớn nhanh quá, càng lớn chúng ta lại càng thu
+                            mình
+                            lại, càng cô đơn. Nếu cậu không có ai để chia sẻ 1 ngày giáng sinh của cậu hạnh phúc đến
+                            nhường
+                            nào,
+                            hãy đến đây! Mình sẽ giúp cậu. </b>
+                        <i class="fas fa-quote-right"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="part_middle">
+        <h2 class="present"><i class="fas fa-quote-left"></i><b> Cậu có nhớ mình đã từng háo hức như nào khi chấp tay
+                cầu
+                ước những món quà vào đêm noel,
+                cất
+                giữ lời ước vào những chiếc tất không? Lâu quá rồi nhỉ, vậy để mình giúp cậu nhớ lại nhé ! </b><i
+                class="fas fa-quote-right"></i></h2>
+    </div>
+    <div class="part_after">
+        <div class="person_1">
+            <div class="imgP"><img src="https://anievo.id/wp-content/uploads/2022/06/1-1-2048x2048-thumbnail_3.jpg"
+                    alt="Paimon"></div>
+            <div class="founder"><b><i>PAIMON</i></b></div>
+            <div class="merryP"><i class="fas fa-quote-left"></i>Xin chào, giáng sinh đến rồi đấy, chúc cậu một kì giáng
+                sinh vui vẻ nhé. Và... thật nhiều đồ ăn ngon nữa!<i class="fas fa-quote-right"></i></div>
+        </div>
+        <div class="person_1">
+            <div class="imgP"><img
+                    src="https://static.lag.vn/upload/news/22/09/17/Yae_Miko_3_XKKY.jpg?w=800&encoder=wic&subsampling=444"
+                    alt="yaemiko"></div>
+            <div class="founder"><b><i>YAE MIKO</i></b></div>
+            <div class="merryP"><i class="fas fa-quote-left"></i>Ara Ara, có vẻ sắp đến giáng sinh rồi nhỉ? Giáng sinh
+                vui vẻ nhé nào rảnh nhớ ghé thăm tôi, trông cây một mình cũng buồn lắm<i class="fas fa-quote-right"></i>
+            </div>
+        </div>
+        <div class="person_1">
+            <div class="imgP"><img src="https://static.zerochan.net/Kaedehara.Kazuha.full.3374629.jpg" alt="Kazuha">
+            </div>
+            <div class="founder"><b><i>KAEDEHARA KAZUHA</i></b></div>
+            <div class="merryP"><i class="fas fa-quote-left"></i>Chào cậu, chúc cậu một mùa giáng sinh an lành bên gia
+                đình và người thân nhé.<i class="fas fa-quote-right"></i></div>
+        </div>
+    </div>
+    <div class="part4">
+        <div class="part4" id="part4_in">
+            <div class="Wish1">
+                <input type="text" id="inp_holder" placeholder="Hãy viết điều ước của bạn vào đây" name="Add">
+                <button id="add_btn" type="button">Gửi</button>
+            </div>
+            <ul class="List_wish">
+
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="footer-1">© Qode Interactive</p>
+        <div class="footer-2">
+            <a href="https://instagram.com/ntdat_1705?igshid=YmMyMTA2M2Y=" class="link"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/vulankhanh?t=_SUd7lzYVisp3aQLW4-Ltw&s=09" class="link"><i
+                    class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100025377541476" class="link"><i
+                    class="fab fa-facebook-f"></i></a>
+        </div>
+        <p class="footer-3">2017 All Rights Reserved</p>
+    </div>
+    <script type="module">
+        //import Firebase from "../assets/js/firebase.js"
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword
+        } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+        import { getFirestore, collection, getDocs, serverTimestamp, addDoc, deleteDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+        console.log(updateDoc)
+        const firebaseConfig = {
+            apiKey: "AIzaSyBsE4TZ_9zqWDRuWKKIZT3fbdmJ6cFkkRw",
+            authDomain: "todo-app-d1fe8.firebaseapp.com",
+            projectId: "todo-app-d1fe8",
+            storageBucket: "todo-app-d1fe8.appspot.com",
+            messagingSenderId: "142251097338",
+            appId: "1:142251097338:web:68d107cdecec1b97d09d43",
+            measurementId: "G-NNE1BHY71Z"
+        };
+        const regex = new RegExp(/...@gmail.com$/);
+        class Firebase {
+            constructor() {
+                this.app = initializeApp(firebaseConfig);
+                this.auth = getAuth(this.app);
+                this.db = getFirestore(this.app);
+            }
+            signup(email, password, provider) {
+                createUserWithEmailAndPassword(this.auth, email, password,)
+                    .then((userCredential) => {
+                        // Signed in 
+                        const user = userCredential.user;
+
+                        alert('Tạo user thành công')
+                        localStorage.setItem('user', JSON.stringify(user))
+                        window.location.href = "./signin.html"
+
+
+                        // ...
+                    })
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+                        console.log(regex.test(email))
+                        if (regex.test(email) !== true) {
+                            document.querySelector(".alert").innerHTML = 'Sai định dạng email';
+                        }
+                        else {
+                            document.querySelector(".alert").innerHTML = errorMessage;
+                        }
+                        // ..
+                    });
+            }
+            signin(email, password) {
+                signInWithEmailAndPassword(this.auth, email, password)
+                    .then((userCredential) => {
+                        // Signed in
+                        const user = userCredential.user;
+
+                        window.location.href = "./christmas.html"
+                        // ...
+                    })
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+                        //document.querySelector(".alert").innerHTML = errorMessage;
+                        console.log(regex.test(email))
+                        if (regex.test(email) !== true) {
+                            document.querySelector(".alert").innerHTML = 'Sai định dạng email';
+                        }
+                        else {
+                            document.querySelector(".alert").innerHTML = errorMessage;
+                        }
+
+                    });
+            }
+            async readWish() {
+                try {
+                    const querySnapshot = await getDocs(collection(this.db, "Wish"));
+                    const data = []
+                    querySnapshot.forEach((doc) => {
+                        data.push({ id: doc.id, content: doc.data().content })
+                        //console.log(`${doc.id} => ${doc.data().content}`);
+                    })
+                    return data
+                } catch (e) {
+                    console.log(err)
+                    return null;
+                }
+
+            }
+            async addWish(content) {
+                try {
+                    const val = {
+                        content,
+                        createdAt: serverTimestamp(),
+                    }
+                    const docRef = await addDoc(collection(this.db, "Wish"), val)
+                    console.log("Document written with ID:", docRef.id)
+                }
+                catch (e) {
+                    console.error("Error adding document:", e)
+                }
+            }
+            async deleteWish(id, wish) {
+                try {
+                    await deleteDoc(doc(this.db, "Wish", id));
+                    alert(`Xoá thành công  `);
+                }
+                catch (error) {
+                    console.log(error)
+                }
+            }
+            async readchuc() {
+                try {
+                    const querySnapshot = await getDocs(collection(this.db, "chuc"));
+                    const data = []
+                    querySnapshot.forEach((doc) => {
+                        data.push({ id: doc.id, content: doc.data().content })
+                        //console.log(`${doc.id} => ${doc.data().content}`);
+                    })
+                    return data
+                } catch (e) {
+                    console.log(err)
+                    return null;
+                }
+
+            }
+            async addchuc(content) {
+                try {
+                    const val = {
+                        content,
+                        createdAt: serverTimestamp(),
+                    }
+                    const docRef = await addDoc(collection(this.db, "chuc"), val)
+                    console.log("Document written with ID:", docRef.id)
+                }
+                catch (e) {
+                    console.error("Error adding document:", e)
+                }
+            }
+            async deletechuc(id, chuc) {
+                try {
+                    await deleteDoc(doc(this.db, "chuc", id));
+                    alert(`xóa thành công `);
+                }
+                catch (error) {
+                    console.log(error)
+                }
+            }
+
+
+        }
+
+
+        export default Firebase
+
+        let db = new Firebase()
+        db.readWish()
+        renderUI()
+        async function renderUI() {
+            try {
+                const data = await db.readWish()
+                const ul = document.querySelector('.List_wish')
+                ul.innerHTML = ''
+                data.forEach(wish => {
+                    const li = document.createElement('li')
+                    li.setAttribute("class", "Wish")
+
+                    const content = `
+						<div class="wish"><p class="wish" id='text_in'><span class="material-symbols-outlined">account_circle</span>Anonymous</p><p id='des'> ${wish.content}</p></div>
+						<div class="action">
+							<i class="fa-solid fa-trash" id="${wish.id}"></i>
+						</div>
+					`
+                    li.innerHTML += content
+                    ul.append(li)
+                })
+                handleEvent();
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        renderUI()
+        let inp_val = ''
+        const holder = document.querySelector('#inp_holder')
+        holder.addEventListener("change", e => {
+            inp_val += e.target.value
+        })
+        console.log(inp_val)
+        const add_btn = document.querySelector('#add_btn')
+        add_btn.addEventListener("click", async e => {
+            try {
+                document.querySelector('#inp_holder').value = ''
+                await db.addWish(inp_val)
+                renderUI()
+                inp_val = ''
+            }
+            catch (error) {
+                console.log(error)
+            }
+        })
+        const handleEvent = () => {
+            const listIconDelete = document.querySelectorAll(".action>i.fa-trash");
+
+            listIconDelete.forEach((node) => {
+                node.addEventListener("click", (e) => {
+                    let id = node.getAttribute("id");
+                    let wish =
+                        node.parentNode.parentNode.querySelector(".wish").textContent;
+                    console.log(wish);
+                    db.deleteWish(id, wish);
+                    renderUI();
+                });
+            });
+        };
+        db.readchuc()
+        async function renderUIC() {
+            try {
+                const data = await db.readchuc()
+                const ul = document.querySelector('.List_C')
+                ul.innerHTML = ''
+                data.forEach(chuc => {
+                    const li = document.createElement('li')
+                    li.setAttribute("class", "Chuc_C")
+
+                    const content = `
+						<div class="chuc"><p class='chuc' id='des2'>${chuc.content}</p></div>
+						
+					`
+                    li.innerHTML += content
+                    ul.append(li)
+                })
+                handleEventC();
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        let inp_val_C = ''
+        const holder_C = document.querySelector('#inp_holder_C')
+        holder_C.addEventListener("change", e => {
+            inp_val_C += e.target.value
+        })
+        console.log(inp_val_C)
+        const add_btn_C = document.querySelector('#add_btn_C')
+        add_btn_C.addEventListener("click", async e => {
+            try {
+                document.querySelector('#inp_holder_C').value = ''
+                await db.addchuc(inp_val_C)
+                inp_val_C = ''
+            }
+            catch (error) {
+                console.log(error)
+            }
+        })
+        // const handleEventC = () => {
+        //     const listIconDelete = document.querySelectorAll(".actionC>i.fa-trash");
+
+        //     listIconDelete.forEach((node) => {
+        //         node.addEventListener("click", (e) => {
+        //             let id = node.getAttribute("id");
+        //             let chuc =
+        //                 node.parentNode.parentNode.querySelector(".chuc").textContent;
+        //             console.log(chuc);
+        //             db.deletechuc(id, chuc);
+        //             renderUIC();
+        //         });
+        //     });
+        // };
+        // <div class="actionC">
+		// 		<i class="fa-solid fa-trash" id="${chuc.id}"></i>
+		// 	</div>
+        const SignIn = document.querySelector('.SignIn')
+        SignIn.addEventListener("click", async e => {
+            window.location.href = "./signin.html"
+        })
+        const SignUp = document.querySelector('.SignUp')
+        SignUp.addEventListener("click", async e => {
+            window.location.href = "./signup.html"
+        })
+        let user = JSON.parse(localStorage.getItem("user"));
+        if (user){
+            document.querySelector('.SignIn').style.display='none'
+            document.querySelector('.SignUp').style.display='none'
+        }
+        else{
+            window.location.href = "./signin.html"
+        }
+        let email = user.email;
+        let content_email = `Welcome, `
+        content_email += email
+        document.getElementById("email").innerHTML = content_email;
+        document.getElementById("logout").addEventListener("click", () => {
+            localStorage.removeItem("user");
+            window.location.href = "./signin.html";
+
+        });
+        function checkau() {
+
+        }
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            if (document.documentElement.scrollTop > 90) {
+                document.getElementById("myH").className = "Header_scroll";
+            } else {
+                document.getElementById("myH").className = "";
+            }
+        }
+
+        const christ = new Date("2022-12-24 21:30");
+
+        const countDown = setInterval(() => {
+            const present = new Date();
+            const diff = christ - present;
+
+            let diffSeconds = diff / 1000;
+
+            const days = Math.floor(diffSeconds / (3600 * 24));
+            diffSeconds -= days * 3600 * 24;
+
+            const hours = Math.floor(diffSeconds / 3600);
+            diffSeconds -= hours * 3600;
+
+            const minutes = Math.floor(diffSeconds / 60);
+            diffSeconds -= minutes * 60;
+
+            const secs = Math.floor(diffSeconds);
+            //interval render clock timer
+            document.getElementById('d').innerText = days.toString();
+            document.getElementById('h').innerText = hours.toString();
+            document.getElementById('m').innerText = minutes.toString();
+            document.getElementById('s').innerText = secs.toString();
+
+            //when clock hits 0
+            if (diff <= 0) {
+                //renderUI()
+
+                renderUIC();
+                //clear interval
+                clearInterval(countDown);
+                document.getElementById('d').innerText = 0;
+                document.getElementById('h').innerText = 0;
+                document.getElementById('m').innerText = 0;
+                document.getElementById('s').innerText = 0;
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

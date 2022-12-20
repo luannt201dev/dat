@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+</html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://static1.s123-cdn-static-a.com/ready_uploads/media/78529/2000_5ce56f105cd21.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: center;
+    background-position-y: bottom;
+  }
+
+  * {
+    box-sizing: border-box
+  }
+
+  form {
+    width: 500px;
+    background-color: white;
+    margin-left: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+  }
+
+  /* Full-width input fields */
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=text]:focus,
+  input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* Set a style for all buttons */
+  button {
+    background-color: #ff0505;
+    color: rgb(255, 255, 255);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #149603;
+  }
+
+  .cancelbtn>a {
+    text-decoration: none;
+    color: white;
+  }
+
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn,
+  .signupbtn {
+    float: left;
+    width: 50%;
+  }
+
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+
+    .cancelbtn,
+    .signupbtn {
+      width: 100%;
+    }
+  }
+
+  .alert {
+    color: red;
+  }
+
+  h2 {
+    display: inline;
+    font-family: 'Xanh Mono', monospace;
+
+  }
+
+  h1 {
+    display: inline;
+    color: red;
+    font-family: 'Xanh Mono', monospace;
+  }
+</style>
+
+<body>
+
+  <form style="border:1px solid #ccc">
+    <div class="container">
+      <h2>Merry</h2>
+      <h1>Christmas</h1>
+      <div class="alert"></div>
+      <p>Hãy điền thông tin vào đây</p>
+      <hr>
+      <label for="provider"><b>Username</b></label>
+      <input type="text" placeholder="Nhập Tên đăng nhập của bạn" name="Provider" id="provider" required>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Nhập Email của bạn" name="email" id="email" required>
+
+      <label for="psw"><b>Mật khẩu</b></label>
+      <input type="password" placeholder="Mật khẩu của bạn" name="psw" id="password" required>
+
+      <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+      <input type="password" placeholder="Nhập lại mật khẩu của bạn" name="psw-repeat" id="Repassword" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>Hãy đồng ý với <a href="#" style="color:dodgerblue">Terms & Privacy</a> để tiếp tục đăng nhập.</p>
+
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">
+          <a href="./signin.html">Đăng Nhập</a>
+        </button>
+        <button type="submit" class="signupbtn">Đăng Kí</button>
+      </div>
+    </div>
+  </form>
+  <script type="module">
+    //import Firebase from "../assets/js/firebase.js"
+    // Import the functions you need from the SDKs you need
+    let user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      window.location.href = "./christmas.html"
+    }
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword
+    } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+    import { getFirestore, collection, getDocs, serverTimestamp, addDoc, deleteDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+    console.log(updateDoc)
+    const firebaseConfig = {
+      apiKey: "AIzaSyBsE4TZ_9zqWDRuWKKIZT3fbdmJ6cFkkRw",
+      authDomain: "todo-app-d1fe8.firebaseapp.com",
+      projectId: "todo-app-d1fe8",
+      storageBucket: "todo-app-d1fe8.appspot.com",
+      messagingSenderId: "142251097338",
+      appId: "1:142251097338:web:68d107cdecec1b97d09d43",
+      measurementId: "G-NNE1BHY71Z"
+    };
+    const regex = new RegExp(/...@gmail.com$/);
+    class Firebase {
+      constructor() {
+        this.app = initializeApp(firebaseConfig);
+        this.auth = getAuth(this.app);
+        this.db = getFirestore(this.app);
+      }
+      signup(email, password, provider) {
+        createUserWithEmailAndPassword(this.auth, email, password,)
+          .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+
+            alert('Tạo user thành công')
+            localStorage.setItem('user', JSON.stringify(user))
+            window.location.href = "./signin.html"
+
+
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(regex.test(email))
+            if (regex.test(email) !== true) {
+              document.querySelector(".alert").innerHTML = 'Sai định dạng email';
+            }
+            else {
+              document.querySelector(".alert").innerHTML = errorMessage;
+            }
+            // ..
+          });
+      }
+      signin(email, password) {
+        signInWithEmailAndPassword(this.auth, email, password)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+
+            window.location.href = "./christmas.html"
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            //document.querySelector(".alert").innerHTML = errorMessage;
+            console.log(regex.test(email))
+            if (regex.test(email) !== true) {
+              document.querySelector(".alert").innerHTML = 'Sai định dạng email';
+            }
+            else {
+              document.querySelector(".alert").innerHTML = errorMessage;
+            }
+
+          });
+      }
+      async readWish() {
+        try {
+          const querySnapshot = await getDocs(collection(this.db, "Wish"));
+          const data = []
+          querySnapshot.forEach((doc) => {
+            data.push({ id: doc.id, content: doc.data().content })
+            //console.log(`${doc.id} => ${doc.data().content}`);
+          })
+          return data
+        } catch (e) {
+          console.log(err)
+          return null;
+        }
+
+      }
+      async addWish(content) {
+        try {
+          const val = {
+            content,
+            createdAt: serverTimestamp(),
+          }
+          const docRef = await addDoc(collection(this.db, "Wish"), val)
+          console.log("Document written with ID:", docRef.id)
+        }
+        catch (e) {
+          console.error("Error adding document:", e)
+        }
+      }
+      async deleteWish(id, wish) {
+        try {
+          await deleteDoc(doc(this.db, "Wish", id));
+          alert(`Xoá thành công ${wish} `);
+        }
+        catch (error) {
+          console.log(error)
+        }
+      }
+      async readchuc() {
+        try {
+          const querySnapshot = await getDocs(collection(this.db, "chuc"));
+          const data = []
+          querySnapshot.forEach((doc) => {
+            data.push({ id: doc.id, content: doc.data().content })
+            //console.log(`${doc.id} => ${doc.data().content}`);
+          })
+          return data
+        } catch (e) {
+          console.log(err)
+          return null;
+        }
+
+      }
+      async addchuc(content) {
+        try {
+          const val = {
+            content,
+            createdAt: serverTimestamp(),
+          }
+          const docRef = await addDoc(collection(this.db, "chuc"), val)
+          console.log("Document written with ID:", docRef.id)
+        }
+        catch (e) {
+          console.error("Error adding document:", e)
+        }
+      }
+      async deletechuc(id, chuc) {
+        try {
+          await deleteDoc(doc(this.db, "chuc", id));
+          alert(`xóa thành công ${chuc} `);
+        }
+        catch (error) {
+          console.log(error)
+        }
+      }
+
+
+    }
+
+
+    export default Firebase
+
+    let btn_submit = document.querySelector(".signupbtn")
+    btn_submit.addEventListener("click", (e) => {
+      e.preventDefault();
+      let Provider = document.querySelector("#provider").value
+      let email = document.querySelector("#email").value
+      let password = document.querySelector("#password").value
+      let Repassword = document.querySelector("#Repassword").value
+
+      if (password !== Repassword) {
+        document.querySelector(".alert").innerHTML = 'Nhập lại mật khẩu không chính xác';
+      }
+      else if (password === Repassword) {
+        console.log(email, password)
+        let fb = new Firebase()
+        fb.signup(email, password)
+      }
+      //let fb = new Firebase()
+      //fb.signup(email, password)
+    })
+  </script>
+</body>
+
+</html>

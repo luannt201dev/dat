@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('https://static1.s123-cdn-static-a.com/ready_uploads/media/89845/2000_5ce78e608e786.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: center;
+    background-position-y: bottom;
+  }
+
+  h2 {
+    color: rgb(255, 255, 255);
+    padding: 20px 0px;
+    margin-left: 200px;
+  }
+
+  form {
+    border: 3px solid #f1f1f1;
+    width: 500px;
+    margin-left: 200px;
+    background-color: #fff;
+  }
+
+  input[type=text],
+  input[type=email],
+  input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #aa1d04;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #b80808;
+  }
+
+  .cancelbtn>a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+
+  .alert {
+    color: red;
+  }
+
+  h2 {
+    display: inline;
+    font-family: 'Xanh Mono', monospace;
+
+  }
+
+  h1 {
+    display: inline;
+    color: red;
+    font-family: 'Xanh Mono', monospace;
+  }
+
+  .title {
+    margin: 20px 0px;
+  }
+</style>
+
+
+<body>
+
+  <div class="title">
+    <h2>Merry</h2>
+    <h1>Christmas</h1>
+  </div>
+
+  <form method="post">
+    <div class="container">
+      <div class="alert"></div>
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Nhập tên dăng nhập của bạn" name="uname" id="provider" required>
+
+      <label for="uname"><b>Email</b></label>
+      <input type="email" placeholder="Nhập email của bạn" name="uname" id="email" required>
+
+      <label for="psw"><b>Mật khẩu</b></label>
+      <input type="password" placeholder="Nhập mật khẩu của bạn" name="psw" id="password" required>
+
+      <button type="submit" id="btn_signin">Đăng nhập</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">
+        <a href="./signup.html">Đăng Kí</a>
+      </button>
+      <span class="psw">Quên <a href="#">mật khẩu</a>?</span>
+    </div>
+  </form>
+  <script type="module">
+    //import Firebase from "../assets/js/firebase.js"
+    // Import the functions you need from the SDKs you need
+    let user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      window.location.href = "./christmas.html"
+    }
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword
+    } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    import { getFirestore, collection, getDocs, serverTimestamp, addDoc, deleteDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+    console.log(updateDoc)
+    const firebaseConfig = {
+      apiKey: "AIzaSyBsE4TZ_9zqWDRuWKKIZT3fbdmJ6cFkkRw",
+      authDomain: "todo-app-d1fe8.firebaseapp.com",
+      projectId: "todo-app-d1fe8",
+      storageBucket: "todo-app-d1fe8.appspot.com",
+      messagingSenderId: "142251097338",
+      appId: "1:142251097338:web:68d107cdecec1b97d09d43",
+      measurementId: "G-NNE1BHY71Z"
+    };
+    const regex = new RegExp(/...@gmail.com$/);
+    class Firebase {
+      constructor() {
+        this.app = initializeApp(firebaseConfig);
+        this.auth = getAuth(this.app);
+        this.db = getFirestore(this.app);
+      }
+      signup(email, password, provider) {
+        createUserWithEmailAndPassword(this.auth, email, password,)
+          .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+
+            alert('Tạo user thành công')
+            localStorage.setItem('user', JSON.stringify(user))
+            window.location.href = "./signin.html"
+
+
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(regex.test(email))
+            if (regex.test(email) !== true) {
+              document.querySelector(".alert").innerHTML = 'Sai định dạng email';
+            }
+            else {
+              document.querySelector(".alert").innerHTML = errorMessage;
+            }
+            // ..
+          });
+      }
+      signin(email, password) {
+        signInWithEmailAndPassword(this.auth, email, password)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            console.log(user)
+            localStorage.setItem('user',JSON.stringify(user))
+            window.location.href = "./christmas.html"
+            // ...
+            
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            //document.querySelector(".alert").innerHTML = errorMessage;
+            console.log(regex.test(email))
+            if (regex.test(email) !== true) {
+              document.querySelector(".alert").innerHTML = 'Sai định dạng email';
+            }
+            else {
+              document.querySelector(".alert").innerHTML = errorMessage;
+            }
+
+          });
+      }
+      async readWish() {
+        try {
+          const querySnapshot = await getDocs(collection(this.db, "Wish"));
+          const data = []
+          querySnapshot.forEach((doc) => {
+            data.push({ id: doc.id, content: doc.data().content })
+            //console.log(`${doc.id} => ${doc.data().content}`);
+          })
+          return data
+        } catch (e) {
+          console.log(err)
+          return null;
+        }
+
+      }
+      async addWish(content) {
+        try {
+          const val = {
+            content,
+            createdAt: serverTimestamp(),
+          }
+          const docRef = await addDoc(collection(this.db, "Wish"), val)
+          console.log("Document written with ID:", docRef.id)
+        }
+        catch (e) {
+          console.error("Error adding document:", e)
+        }
+      }
+      async deleteWish(id, wish) {
+        try {
+          await deleteDoc(doc(this.db, "Wish", id));
+          alert(`Xoá thành công ${wish} `);
+        }
+        catch (error) {
+          console.log(error)
+        }
+      }
+      async readchuc() {
+        try {
+          const querySnapshot = await getDocs(collection(this.db, "chuc"));
+          const data = []
+          querySnapshot.forEach((doc) => {
+            data.push({ id: doc.id, content: doc.data().content })
+            //console.log(`${doc.id} => ${doc.data().content}`);
+          })
+          return data
+        } catch (e) {
+          console.log(err)
+          return null;
+        }
+
+      }
+      async addchuc(content) {
+        try {
+          const val = {
+            content,
+            createdAt: serverTimestamp(),
+          }
+          const docRef = await addDoc(collection(this.db, "chuc"), val)
+          console.log("Document written with ID:", docRef.id)
+        }
+        catch (e) {
+          console.error("Error adding document:", e)
+        }
+      }
+      async deletechuc(id, chuc) {
+        try {
+          await deleteDoc(doc(this.db, "chuc", id));
+          alert(`xóa thành công ${chuc} `);
+        }
+        catch (error) {
+          console.log(error)
+        }
+      }
+
+
+    }
+
+
+    export default Firebase
+    let btn_signin = document.querySelector("#btn_signin")
+    btn_signin.addEventListener("click", (e) => {
+      e.preventDefault();
+      let Provider = document.querySelector("#provider").value
+      let email = document.querySelector("#email").value
+      let password = document.querySelector("#password").value
+      console.log(email, password)
+      let fb = new Firebase()
+      fb.signin(email, password)
+    })
+    let username = document.getElementById("username");
+  </script>
+</body>
+
+</html>
